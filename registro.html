@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Petinder es una organizacion que fomenta la adopcion de perros y gatos">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Hazte socio</title>
+</head>
+<body class="page-registro">
+    <header>
+        <nav class="container">
+            <a class="link-logo" href="index.html">
+                <img class="logo" src="./images/logo.svg" alt="Logo Petinter">
+            </a>
+                <ul class="menu-links">
+                    <li><a href="about.html">Sobre petinder</a></li>
+                    <li><a href="tshirt.html">Camiseta</a></li>
+                    <li><a href="">Hazte socio</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Utilizamos la etiqueta figure para englobar img-->
+            <h1 class="title">Hazte socio</h1>
+
+            <p>
+                Colabora con Petinder haciéndote socio por solo 15 euros mensuales. Con muy poco puedes ayudar mucho a nuestros amigos peludos. Además puedes comprar nuestra exclusiva camiseta por solo 10 euros que se añadirán al primer pago. Rellena el siguiente formulario para unirte a nosotros:
+            </p>
+        
+            <form id="contact-form" action="#" method="post">
+                
+                <div class="container-datoscontacto">
+                    <fieldset>
+                        <legend>Datos personales</legend>
+                    
+                        <div>
+                            <label for="nombre">Nombre:<span>*</span></label>
+                            <input type="text" id="nombre" name="nombre" title="Escriba su nombre" placeholder="Nombre">
+                        </div>
+                        <div>
+                            <label for="apellidos">Apellidos:<span>*</span></label>
+                            <input type="text" id="apellidos" name="apellidos" title="Escriba sus apellidos" placeholder="Apellidos" required>
+                        </div>
+                        <div>
+                            <label for="email">Correo electrónico:<span>*</span></label>
+                            <input type="email" id="email" name="email" title="Escriba su email" placeholder="Correo electrónico" required>
+                        </div>
+                        <div>
+                            <label for="dni">DNI:<span>*</span></label>
+                            <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Za-z]{1}" title="Escriba su dni correctamente. Formato 12345678A" placeholder="DNI" required>
+                        </div>
+                        <div>
+                            <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+                        </div>                       
+                        
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Direccion</legend>
+                        <div>
+                            <label for="calle_numero">Calle y número:<span>*</span></label>
+                            <input type="text" id="calle_numero" name="calle_numero" title="Escriba su direccion completa" placeholder="Calle y número" required>
+                        </div>
+                        <div>
+                            <label for="ciudad">Ciudad:<span>*</span></label>
+                            <input type="text" id="ciudad" name="ciudad" title="Escriba su ciudad" placeholder="Ciudad" required>
+                        </div>
+                        <div>
+                            <label for="provincia">Provincia:<span>*</span></label>
+                            <input type="text" id="provincia" name="provincia" title="Escriba su provincia" placeholder="Provincia" required>
+                        </div>                    
+                        <div>
+                            <label for="codigo_postal">Código postal:<span>*</span></label>
+                            <input type="text" id="codigo_postal" name="codigo_postal" title="Escriba su codigo postal. Formato 31008" placeholder="Código postal" pattern="\d{5}" title="Contiene 5 numeros" required>
+                        </div>
+                        
+                        <div>
+                            <label for="pais">País:</label>
+                            <select id="pais" name="pais" title="Seleccione un pais" required>
+                                <option value="" disabled selected>Seleccionar</option>
+                                <option value="Andorra">Andorra</option>
+                                <option value="España">España</option>
+                                <option value="Francia">Francia</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="container-pagos">
+                    <fieldset>
+                        <legend>Datos de pago y camiseta</legend> 
+                        <div class="pago-container">                      
+                            <h2>Método de pago:</h2> 
+                                <input type="radio" id="transferencia" name="pago" value="Transferencia" title="Indique como quiere realizar el pago" required>
+                                <label for="transferencia" title="Indique como quiere realizar el pago">Transferencia</label>
+                                <input type="radio" id="tarjeta" name="pago" value="Tarjeta de crédito" title="Indique como quiere realizar el pago" required>
+                                <label for="tarjeta" title="Indique como quiere realizar el pago">Tarjeta de crédito</label>
+                                <input type="radio" id="paypal" name="pago" value="Paypal" title="Indique como quiere realizar el pago" required>
+                                <label for="paypal" title="Indique como quiere realizar el pago">Paypal</label>
+                        </div>
+                        <div class="camiseta">  
+                            <h2>Camiseta</h2>
+                            <p>Si quieres que te enviemos la camiseta Petinder por 10€ más, selecciona la talla a continuación.</p>
+                        </div>
+                        <div class="tallas">
+                            <label for="talla_camiseta">Talla camiseta:</label>
+                            <select id="talla_camiseta" name="talla_camiseta" title="Seleccione la talla de la camiseta">
+                                <option value="">&#10004; No quiero camiseta</option>
+                                <optgroup label="Mujeres">
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                </optgroup>
+                                <optgroup label="Hombres">
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="XXL">XXL</option>
+                                    <option value="XXL">XXXL</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="container-terminos">
+                        <p><span class="condiciones">* Todos los campos marcados son obligatorios</span></p>
+
+                        <div class="privacidad-container">
+                            <input type="checkbox" id="privacidad" name="privacidad" value="" title="Acepta las condiciones" required>
+                            <label for="privacidad" title="Acepta las condiciones">He leído y acepto la política de privacidad y las condiciones de uso</label>
+                        </div>    
+                
+                    <button type="submit" title="Haga clic para realizar su compra">Enviar</button>
+                </div>    
+            </form>
+
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <span>2021 © Petinder - Cristina Villacastin Roda</span>
+                <ul class="legal-links">
+                    <li><a href="">Términos y condiciones de uso</a></li>
+                    <li><a href="">Política de privacidad</a></li>
+                    <li><a href="">Cookies</a></li>
+                    <li><a href="">FAQ</a></li>
+                </ul>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
+

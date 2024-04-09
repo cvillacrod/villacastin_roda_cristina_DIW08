@@ -1,0 +1,510 @@
+@import url("http://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+@import url("http://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+
+/****Reglas generales video 2****/
+/*Definimos  las variales*/
+
+:root {
+  --text-color: rgb(23, 23, 23);
+  --primary-color: rgb(91, 73, 254);
+  --secondary-color: rgb(125, 232, 140);
+  --secondary-light-color: rgb(207, 243, 125);
+  --tercero-light-color: rgb(203, 203, 203);
+  --cuarto-light-color: rgb(77, 77, 77);
+}
+
+/*Reset margenes y paddings video 2*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: #f9f9f9;
+}
+/*coincide con el trozo de fondo azul y por eso lo pongo en negro*/
+.page-about a {
+  color: var(--text-color);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+.title {
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 1.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+}
+
+/***Las reglas que van a continuacion consiguen que los elementos
+ dentro del elemento container se adapte a los diferentes dispositivos.
+ La clase .container define un contenedor que ocupa el 100%  de la pantalla del dispositivo,
+ con un relleno a la izquierda y por la derecha de 15pixeles 
+ y margenes por la izquierda y por la derecha automaticos.
+ Y ademas utilizaremos medias queries,con las medias queries indicarmeos la maxima anchura del container,
+ cuando los dispositivos tengan la anchura minima indica por el punto de rutura, breakpoint**/
+/*video 2*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1340px;
+  }
+}
+
+/*Bloques generales de la plantilla VIDEO 3*/
+
+header {
+  min-height: 115px;
+  /*background: #f9f9f9;*/
+  box-shadow: 0 4px 8px 0 rgb(13, 10, 44, 0.04);
+  background: linear-gradient(
+    75deg,
+    var(--secondary-light-color) 0%,
+    var(--secondary-color)
+  );
+}
+
+header .link-logo {
+  display: inline-block;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+header .logo {
+  height: 50px;
+  width: auto;
+  margin-right: 5px;
+}
+
+header .menu-links li {
+  margin-right: 15px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+header .menu-links a {
+  color: black;
+}
+
+header .menu-links li.active a {
+  font-weight: 700;
+}
+
+main {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+main a {
+  border-bottom: 1px dotted var(--primary-color);
+}
+
+main a:hover {
+  border-color: var(--secondary-color);
+}
+
+footer {
+  background: var(--primary-color);
+  color: white;
+  padding: 20px 0;
+  margin-top: auto;
+  font-size: 0.9rem;
+  font-weight: 500;
+  height: 90px;
+}
+
+footer a {
+  color: white;
+}
+footer .legal-links {
+  margin-top: 5px;
+}
+
+footer .legal-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/**video 4 formateo del index-modificacion video 5/
+/*pagina home ,camiseta y parte de registro*/
+
+.page-home header {
+  /*background: transparent;*/
+  box-shadow: none;
+  position: fixed;
+  width: 100%;
+}
+
+.page-home header,
+.page-tshirt header {
+  /*background: transparent;*/
+  box-shadow: none;
+  position: fixed;
+  width: 100%;
+}
+
+.page-home,
+.page-tshirt {
+  background: linear-gradient(
+    75deg,
+    var(--secondary-light-color) 0%,
+    var(--secondary-color)
+  );
+}
+
+.page-home main,
+.page-tshirt main,
+.page-registro main {
+  padding: 0;
+}
+
+.page-home .title,
+.page-tshirt .title,
+.page-registro .title {
+  font-size: 3.4rem;
+  margin-bottom: 15px;
+  line-height: 4rem;
+}
+
+.page-home .title span,
+.page-tshirt .title span,
+.page-registro .title span {
+  color: white;
+}
+
+.page-home .featured,
+.page-tshirt .featured,
+.page-registro .featured {
+  max-width: 470px;
+}
+
+.page-home main .container,
+.page-tshirt main .container {
+  min-height: calc(100vh - 90px);
+  background: url(../images/hero_image_bg.png) 100% 100% no-repeat;
+  background-size: 700px auto;
+  padding-top: 150px;
+  padding-bottom: 120px;
+}
+
+.page-home main .featured .featured-texto {
+  margin-bottom: 25px;
+}
+
+.search-bar .search-control {
+  padding-left: 45px;
+  height: 58px;
+  background: #fff url(../images/icon_search.svg) 5px 50% no-repeat;
+}
+
+/*formateo about*/
+
+.page-about header {
+  /* background: transparent;*/
+  box-shadow: none;
+  position: fixed;
+  width: 100%;
+}
+
+.page-about {
+  background: linear-gradient(
+    75deg,
+    var(--secondary-light-color) 0%,
+    var(--secondary-color)
+  );
+}
+
+.page-about main {
+  padding: 0;
+}
+
+.page-about .title {
+  font-size: 3.4rem;
+  margin-bottom: 15px;
+  line-height: 4rem;
+}
+
+.page-about .title span {
+  color: white;
+}
+
+.page-about .featured {
+  max-width: 470px;
+}
+
+.page-about main .container {
+  min-height: calc(100vh - 90px);
+  background: url(../images/hero_image_bg.png) 100% 100% no-repeat;
+  background-size: 700px auto;
+  padding-top: 150px;
+  padding-bottom: 120px;
+}
+
+.page-home about .featured .featured-texto {
+  margin-bottom: 25px;
+}
+
+/*video 5 -formulario search - home*/
+.form-control {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+}
+
+/*Pagina Camisetas- tabla- video 7*/
+.page-tshirt main {
+  min-height: calc(100vh - 205px);
+}
+
+.table {
+  width: 95%;
+  margin: 30px;
+  border-collapse: collapse;
+}
+
+.table,
+.table th,
+.table td {
+  border: 1px solid black;
+}
+
+.table th {
+  background: var(--secondary-light-color);
+  padding: 5px 10px;
+}
+
+.table thead th {
+  text-align: center;
+}
+
+.table tbody th {
+  text-align: left;
+}
+
+.table thead th:first-child {
+  background-color: var(--secondary-color);
+}
+
+.table td {
+  background: white;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.table tr:nth-child(odd) td {
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+table caption {
+  background: var(--primary-color);
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/*Formateo  de la pagina registro-hazte socio*/
+
+.page-registro header {
+  /* background: transparent;*/
+  background: white;
+  box-shadow: none;
+  position: fixed;
+  width: 100%;
+}
+
+.page-registro {
+  background: var(--tercero-light-color);
+}
+
+.page-registro main .container {
+  min-height: calc(100vh - 90px);
+  /*background: url(../images/hero_image_bg.png) 100% 100% no-repeat;*/
+  background-size: 700px auto;
+  padding-top: 150px;
+  padding-bottom: 120px;
+}
+
+/*Formato formulario-hazte socio*/
+
+fieldset {
+  border: 2px solid var(--primary-color);
+  padding: 20px;
+  /*background-color: #f0f0f0;*/
+  background-color: white;
+  margin-bottom: 20px;
+  width: 45%;
+}
+
+legend {
+  color: white;
+  background-color: var(--primary-color);
+  padding: 5px 10px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+/*asi las etiquetas y los input van uno en cada fila y separados arriba y abajo*/
+.container-datoscontacto {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.page-registro label span {
+  color: red;
+}
+
+.container-datoscontacto input,
+.container-datoscontacto select {
+  width: 100%;
+  background-color: white;  
+  height: 35px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+}
+
+
+.container-pagos select {
+  width: auto;
+  background-color: white;  
+  height: 35px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  display: block;
+  color: var(--text-color);
+}
+
+.container-datoscontacto select option,
+.container-pagos option {
+  background-color: var(--tercero-light-color);
+  color: var(--text-color);
+}
+
+optgroup {
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-color: var(--tercero-light-color);
+}
+
+input::placeholder {
+  color: var(--cuarto-light-color);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border: 2px solid var(--primary-color);
+}
+
+/*margen superior para el div camiseta, q contiene el titulo y un breve texto*/
+.camiseta {
+  padding-top: 15px;
+}
+
+/*contenedor metodos de pago*/
+.pago-container label,
+.pago-container input {
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 1200px) {
+  .pago-container label,
+  .pago-container input {
+    display: block; /* Mostrar en bloques uno debajo del otro */
+    width: auto; /* Ancho automático */
+  }
+}
+
+.condiciones {
+  color: red;
+}
+
+.privacidad-container input {
+  background-color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+}
+.privacidad-container label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+button[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+  background-color: #004080;
+  font-weight: bold;
+}
